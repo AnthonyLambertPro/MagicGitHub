@@ -12,7 +12,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.openclassrooms.magicgithub.api.FakeApiServiceGenerator.FAKE_USERS;
+import static com.openclassrooms.magicgithub.api.FakeApiServiceGenerator.FAKE_USERS_NEW;
 import static com.openclassrooms.magicgithub.api.FakeApiServiceGenerator.FAKE_USERS_RANDOM;
+import static com.openclassrooms.magicgithub.api.FakeApiServiceGenerator.FAKE_USERS_RANDOM_NEW;
 import static org.junit.Assert.*;
 import static org.hamcrest.collection.IsIterableContainingInAnyOrder.containsInAnyOrder;
 
@@ -34,7 +36,7 @@ public class UserRepositoryTest {
     @Test
     public void getUsersWithSuccess() {
         List<User> usersActual = userRepository.getUsers();
-        List<User> usersExpected = FAKE_USERS;
+        List<User> usersExpected = FAKE_USERS_NEW;
         assertThat(usersActual, containsInAnyOrder(usersExpected.toArray()));
     }
 
@@ -44,12 +46,12 @@ public class UserRepositoryTest {
         userRepository.generateRandomUser();
         User user = userRepository.getUsers().get(0);
         assertEquals(1, userRepository.getUsers().size());
-        assertTrue(FAKE_USERS_RANDOM.stream().map(User::getAvatarUrl).collect(Collectors.toList()).contains(user.getAvatarUrl()));
-        assertTrue(FAKE_USERS_RANDOM.stream().map(User::getId).collect(Collectors.toList()).contains(user.getId()));
-        assertTrue(FAKE_USERS_RANDOM.stream().map(User::getLogin).collect(Collectors.toList()).contains(user.getLogin()));
-        assertFalse(FAKE_USERS.stream().map(User::getAvatarUrl).collect(Collectors.toList()).contains(user.getAvatarUrl()));
-        assertFalse(FAKE_USERS.stream().map(User::getId).collect(Collectors.toList()).contains(user.getId()));
-        assertFalse(FAKE_USERS.stream().map(User::getLogin).collect(Collectors.toList()).contains(user.getLogin()));
+        assertTrue(FAKE_USERS_RANDOM_NEW.stream().map(User::getAvatarUrl).collect(Collectors.toList()).contains(user.getAvatarUrl()));
+        assertTrue(FAKE_USERS_RANDOM_NEW.stream().map(User::getId).collect(Collectors.toList()).contains(user.getId()));
+        assertTrue(FAKE_USERS_RANDOM_NEW.stream().map(User::getLogin).collect(Collectors.toList()).contains(user.getLogin()));
+        assertFalse(FAKE_USERS_NEW.stream().map(User::getAvatarUrl).collect(Collectors.toList()).contains(user.getAvatarUrl()));
+        assertFalse(FAKE_USERS_NEW.stream().map(User::getId).collect(Collectors.toList()).contains(user.getId()));
+        assertFalse(FAKE_USERS_NEW.stream().map(User::getLogin).collect(Collectors.toList()).contains(user.getLogin()));
     }
 
     @Test
