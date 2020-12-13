@@ -68,10 +68,10 @@ public abstract class FakeApiServiceGenerator {
     );
 
     public static List<User> FAKE_USERS_RANDOM_NEW = Arrays.asList(
-            new User("021", "Lea", "https://www.womenwithdroids.com/wp-content/uploads/2011/03/droidette-logo-purpleFINAL.png"),
-            new User("022", "Geoffrey", "https://images-na.ssl-images-amazon.com/images/I/41-vNRXUHCL._AC_SY355_.jpg"),
-            new User("023", "Simon", "https://images-na.ssl-images-amazon.com/images/I/41-vNRXUHCL._AC_SY355_.jpg"),
-            new User("024", "André", "https://images-na.ssl-images-amazon.com/images/I/41-vNRXUHCL._AC_SY355_.jpg"),
-            new User("025", "Leopold", "https://images-na.ssl-images-amazon.com/images/I/41-vNRXUHCL._AC_SY355_.jpg")
+            new User("021", "Lea", "https://pbs.twimg.com/profile_images/1739585900/androidgirl_400x400.png"),
+            new User("022", "Geoffrey", "https://www.kindpng.com/picc/m/119-1199611_hot-girl-png-text-android-logo-hd-transparent.png"),
+            new User("023", "Simon", "https://image.flaticon.com/icons/png/512/61/61120.png"),
+            new User("024", "André", "https://img1.freepng.fr/20180602/pyb/kisspng-computer-icons-android-icon-android-5b12edf2b3af08.185175261527967218736.jpg"),
+            new User("025", "Leopold", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4vs8RIvpEw56sSlz9KJoW0mc4WACjomvliA&usqp=CAU")
     );
 }
